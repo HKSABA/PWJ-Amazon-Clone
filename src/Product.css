@@ -1,0 +1,115 @@
+.product {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+  max-height: 400px;
+  width: fit-content;
+  width: 10vw;
+  min-width: 100px;
+  margin: 8px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 10px lightsteelblue;
+  float: left;
+}
+
+.product__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.product__content .product__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.product__content:hover .product__overlay {
+  opacity: 1;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  width: 90%;
+  /* top: 50%; */
+  /* left: 50%; */
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.product__content:hover .product__info {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  color: white;
+}
+
+.product__price {
+  margin-top: 5px;
+}
+
+.product__rating {
+  display: flex;
+}
+
+.product__image {
+  max-height: 200px;
+  padding: 2% 3%;
+  border-radius: 20px;
+  width: 90%;
+  object-fit: contain;
+  align-items: center;
+}
+
+.product__image > img {
+  width: 100%;
+}
+
+.product__button {
+  background-color: #f0c14b;
+  border: gold;
+  border-color: #a88734 #9c7e31 #846a29;
+  margin-top: 10px;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 99px;
+  outline-width: 0;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+.product__button:hover {
+  box-shadow: 0 0 6px white;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
